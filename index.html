@@ -176,7 +176,7 @@
   }
   .bm-badge[hidden] { display: none !important; }
   .bm-panel {
-    position: fixed; inset: 0; z-index: 50; background: var(--paper);
+    position: fixed; inset: 0; z-index: 100; background: var(--paper);
     display: flex; flex-direction: column; overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -220,6 +220,7 @@
   .bm-fallback a:hover { text-decoration: underline; }
   .bm-fallback .bookmark-btn { position: static; flex: 0 0 auto; }
   body.bm-open { overflow: hidden; }
+  body.bm-open .bm-fab { display: none !important; }
   @media (max-width: 520px) {
     .grid { grid-template-columns: 1fr; }
     .card { height: 27.5rem; }
@@ -248,15 +249,15 @@
 </div>
 <main>
 <div class="topbar">
-  <p class="updated">Updated September 23, 2026 at 9:34 PM PT</p>
+  <p class="updated">Updated September 23, 2026 at 9:39 PM PT</p>
   <nav class="tabs" aria-label="Vehicle category">
-    <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="triumphs" data-category="triumphs">Triumph <span aria-hidden="true">(46)</span></button>
+    <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="triumphs" data-category="triumphs">Triumph <span aria-hidden="true">(59)</span></button>
     <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="ford-trucks" data-category="ford-trucks">Ford <span aria-hidden="true">(359)</span></button>
   </nav>
 </div>
 <div class="filter-bar" id="filter-bar" role="group" aria-label="Listing filters"><button type="button" class="filter-chip" data-filter="new-today" data-filter-cat="all" aria-pressed="false">New today</button><button type="button" class="filter-chip" data-filter="ca" data-filter-cat="all" aria-pressed="false">In California</button><button type="button" class="filter-chip" data-filter="4x4" data-filter-cat="ford-trucks" aria-pressed="false" hidden>4x4/Highboy</button><button type="button" class="filter-chip" data-filter="desert-sled" data-filter-cat="triumphs" aria-pressed="false">Desert sled</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="pre-1960" aria-pressed="false">Pre-1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1960-1966" aria-pressed="false">1960–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1967-1970" aria-pressed="false">1967–1970</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1971-1973" aria-pressed="false">1971–1973</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="pre-1948" aria-pressed="false" hidden>Pre-1948</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1948-1952" aria-pressed="false" hidden>1948–1952</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1953-1956" aria-pressed="false" hidden>1953–1956</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1957-1960" aria-pressed="false" hidden>1957–1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1961-1966" aria-pressed="false" hidden>1961–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1967-1972" aria-pressed="false" hidden>1967–1972</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1973-1979" aria-pressed="false" hidden>1973–1979</button><button type="button" class="filter-chip is-clear" data-filter="clear" data-filter-cat="all" id="filter-clear" disabled>Clear filters</button><span class="filter-meta" id="filter-showing">Showing 0 of 0</span></div>
 <section class="watch-section" aria-labelledby="triumphs" data-category="triumphs">
-      <div class="section-heading"><h2 id="triumphs">Triumphs</h2><span>46 listings</span></div>
+      <div class="section-heading"><h2 id="triumphs">Triumphs</h2><span>59 listings</span></div>
       <div class="grid"><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/2235832073866070" data-url="https://www.facebook.com/marketplace/item/2235832073866070/" data-title="1973 Triumph 750 bonneville" data-price="$4,000" data-category="triumphs" data-ca="1" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1973">
       <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
       <a class="photo-link" href="https://www.facebook.com/marketplace/item/2235832073866070/" target="_blank" rel="noopener" aria-label="Open listing for 1973 Triumph 750 bonneville"><div class="photo-frame"><img src="images/fb-triumph-1973-1.jpg" alt="1973 Triumph 750 bonneville" loading="lazy" decoding="async"></div></a>
@@ -526,6 +527,136 @@
         <p class="source">Facebook Marketplace · Jacksonville, FL</p>
         
         <a class="listing" href="https://www.facebook.com/marketplace/item/1953801985322041/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/987303817364308" data-url="https://www.facebook.com/marketplace/item/987303817364308/" data-title="1970 Triumph bobber" data-price="$2,900" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1970" data-year="1970">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/987303817364308/" target="_blank" rel="noopener" aria-label="Open listing for 1970 Triumph bobber"><div class="photo-frame"><img src="images/fb-triumph-1970-8300720d.jpg" alt="1970 Triumph bobber" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$2,900</div>
+        <h2>1970 Triumph bobber</h2>
+        <p class="source">Facebook Marketplace · Redmond, OR</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/987303817364308/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/2777769885920125" data-url="https://www.facebook.com/marketplace/item/2777769885920125/" data-title="1964 Triumph t100" data-price="$3,500" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1960-1966" data-year="1964">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/2777769885920125/" target="_blank" rel="noopener" aria-label="Open listing for 1964 Triumph t100"><div class="photo-frame"><img src="images/fb-triumph-1964-ed7e43da.jpg" alt="1964 Triumph t100" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,500</div>
+        <h2>1964 Triumph t100</h2>
+        <p class="source">Facebook Marketplace · Smyrna, TN</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/2777769885920125/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1579035050480033" data-url="https://www.facebook.com/marketplace/item/1579035050480033/" data-title="1965 Triumph triumph trophy" data-price="$3,500" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1960-1966" data-year="1965">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1579035050480033/" target="_blank" rel="noopener" aria-label="Open listing for 1965 Triumph triumph trophy"><div class="photo-frame"><img src="images/fb-triumph-1965-f417d151.jpg" alt="1965 Triumph triumph trophy" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,500</div>
+        <h2>1965 Triumph triumph trophy</h2>
+        <p class="source">Facebook Marketplace · St Augustine, FL</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1579035050480033/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1534068805129610" data-url="https://www.facebook.com/marketplace/item/1534068805129610/" data-title="1966 Triumph" data-price="$3,500" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1960-1966" data-year="1966">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1534068805129610/" target="_blank" rel="noopener" aria-label="Open listing for 1966 Triumph"><div class="photo-frame"><img src="images/fb-triumph-1966-df32cab5.jpg" alt="1966 Triumph" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,500</div>
+        <h2>1966 Triumph</h2>
+        <p class="source">Facebook Marketplace · Greeley, CO</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1534068805129610/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1060986699757457" data-url="https://www.facebook.com/marketplace/item/1060986699757457/" data-title="1972 Triumph bonneville" data-price="$3,500" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1972">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1060986699757457/" target="_blank" rel="noopener" aria-label="Open listing for 1972 Triumph bonneville"><div class="photo-frame"><img src="images/fb-triumph-1972-9f5e3dfa.jpg" alt="1972 Triumph bonneville" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,500</div>
+        <h2>1972 Triumph bonneville</h2>
+        <p class="source">Facebook Marketplace · Royse City, TX</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1060986699757457/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/3116908345324630" data-url="https://www.facebook.com/marketplace/item/3116908345324630/" data-title="1971 Triumph tr6c" data-price="$3,650" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1971">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/3116908345324630/" target="_blank" rel="noopener" aria-label="Open listing for 1971 Triumph tr6c"><div class="photo-frame"><img src="images/fb-triumph-1971-ae920dd9.jpg" alt="1971 Triumph tr6c" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,650</div>
+        <h2>1971 Triumph tr6c</h2>
+        <p class="source">Facebook Marketplace · Saranac, MI</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/3116908345324630/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1025759003707081" data-url="https://www.facebook.com/marketplace/item/1025759003707081/" data-title="1969 Triumph Trophy 500" data-price="$3,800" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1970" data-year="1969">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1025759003707081/" target="_blank" rel="noopener" aria-label="Open listing for 1969 Triumph Trophy 500"><div class="photo-frame"><img src="images/fb-triumph-1969-af07e937.jpg" alt="1969 Triumph Trophy 500" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$3,800</div>
+        <h2>1969 Triumph Trophy 500</h2>
+        <p class="source">Facebook Marketplace · Oakland, MD</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1025759003707081/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1009703562028029" data-url="https://www.facebook.com/marketplace/item/1009703562028029/" data-title="1967 Triumph tr6c" data-price="$4,000" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1970" data-year="1967">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1009703562028029/" target="_blank" rel="noopener" aria-label="Open listing for 1967 Triumph tr6c"><div class="photo-frame"><img src="images/fb-triumph-1967-64f8afc3.jpg" alt="1967 Triumph tr6c" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,000</div>
+        <h2>1967 Triumph tr6c</h2>
+        <p class="source">Facebook Marketplace · Sussex, WI</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1009703562028029/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/810916862078985" data-url="https://www.facebook.com/marketplace/item/810916862078985/" data-title="1968 Triumph TR6R trophy sport m/c" data-price="$4,000" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1970" data-year="1968">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/810916862078985/" target="_blank" rel="noopener" aria-label="Open listing for 1968 Triumph TR6R trophy sport m/c"><div class="photo-frame"><img src="images/fb-triumph-1968-6ccac430.jpg" alt="1968 Triumph TR6R trophy sport m/c" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,000</div>
+        <h2>1968 Triumph TR6R trophy sport m/c</h2>
+        <p class="source">Facebook Marketplace · Arlington Heights, IL</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/810916862078985/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1036228142068269" data-url="https://www.facebook.com/marketplace/item/1036228142068269/" data-title="1968 Triumph t100c" data-price="$4,200" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1970" data-year="1968">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1036228142068269/" target="_blank" rel="noopener" aria-label="Open listing for 1968 Triumph t100c"><div class="photo-frame"><img src="images/fb-triumph-1968-2e1cc81a.jpg" alt="1968 Triumph t100c" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,200</div>
+        <h2>1968 Triumph t100c</h2>
+        <p class="source">Facebook Marketplace · Flower Mound, TX</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1036228142068269/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/560128179741874" data-url="https://www.facebook.com/marketplace/item/560128179741874/" data-title="1971 Triumph bonneville" data-price="$4,250" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1971">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/560128179741874/" target="_blank" rel="noopener" aria-label="Open listing for 1971 Triumph bonneville"><div class="photo-frame"><img src="images/fb-triumph-1971-234a4b58.jpg" alt="1971 Triumph bonneville" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,250</div>
+        <h2>1971 Triumph bonneville</h2>
+        <p class="source">Facebook Marketplace · Fort Smith, AR</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/560128179741874/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/1448269717143549" data-url="https://www.facebook.com/marketplace/item/1448269717143549/" data-title="1957 Triumph t20 tiger cub" data-price="$4,295" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="pre-1960" data-year="1957">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/1448269717143549/" target="_blank" rel="noopener" aria-label="Open listing for 1957 Triumph t20 tiger cub"><div class="photo-frame"><img src="images/fb-triumph-1957-156d983b.jpg" alt="1957 Triumph t20 tiger cub" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,295</div>
+        <h2>1957 Triumph t20 tiger cub</h2>
+        <p class="source">Facebook Marketplace · Brookings, OR</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/1448269717143549/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/28149163381431770" data-url="https://www.facebook.com/marketplace/item/28149163381431770/" data-title="1972 Triumph trident" data-price="$4,500" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1972">
+      <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
+      <a class="photo-link" href="https://www.facebook.com/marketplace/item/28149163381431770/" target="_blank" rel="noopener" aria-label="Open listing for 1972 Triumph trident"><div class="photo-frame"><img src="images/fb-triumph-1972-41ac70d8.jpg" alt="1972 Triumph trident" loading="lazy" decoding="async"></div></a>
+      <div class="card-body">
+        <div class="price">$4,500</div>
+        <h2>1972 Triumph trident</h2>
+        <p class="source">Facebook Marketplace · Odessa, FL</p>
+        <p class="date">Listed Sep 23, 2026</p>
+        <a class="listing" href="https://www.facebook.com/marketplace/item/28149163381431770/" target="_blank" rel="noopener">View listing <span aria-hidden="true">↗</span></a>
       </div>
     </article><article class="card" data-bookmark-id="https://www.facebook.com/marketplace/item/2679193362496594" data-url="https://www.facebook.com/marketplace/item/2679193362496594/" data-title="1970 Triumph tr25w" data-price="$2,100" data-category="triumphs" data-ca="0" data-4x4="0" data-desert-sled="0" data-new-today="0" data-year-group="1967-1970" data-year="1970">
       <button type="button" class="bookmark-btn" aria-pressed="false" aria-label="Save bookmark"><svg class="bm-outline" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" d="M6.5 3.5h11a1 1 0 0 1 1 1V21l-6.5-3.6L5.5 21V4.5a1 1 0 0 1 1-1z"/></svg><svg class="bm-fill" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19.2l-7-3.9-7 3.9V3a1 1 0 0 1 1-1z"/></svg></button>
