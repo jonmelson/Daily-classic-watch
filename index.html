@@ -31,38 +31,18 @@
   }
   main { max-width: 1400px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 4rem) 4rem; touch-action: pan-y; }
   .topbar {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(245, 245, 247, 0.92);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-    padding: .65rem 0 .4rem;
-    margin: 0 0 .35rem;
-    border-bottom: 1px solid rgba(0,0,0,.06);
+    padding: .85rem 0 .15rem;
+    margin: 0 0 .15rem;
   }
   .updated {
-    margin: 0 0 .5rem;
+    margin: 0 0 .75rem;
     text-align: center;
     color: var(--muted);
     font-size: .75rem;
     font-weight: 400;
     letter-spacing: -0.01em;
   }
-  .tabs {
-    display: flex; gap: 0; width: max-content; max-width: 100%;
-    margin: 0 auto .1rem; padding: .2rem;
-    background: #e8e8ed; border: 0; border-radius: 999px;
-  }
-  .tab {
-    appearance: none; border: 0; border-radius: 999px;
-    padding: .5rem 1.05rem; background: transparent; color: var(--ink);
-    cursor: pointer; font: inherit; font-size: .875rem; font-weight: 500;
-    white-space: nowrap; transition: background .15s ease, color .15s ease, box-shadow .15s ease;
-  }
-  .tab[aria-selected="true"] {
-    background: #fff; color: var(--ink);
-    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 1px rgba(0,0,0,.08);
-  }
-  .tab:focus-visible { outline: 3px solid rgba(0,113,227,.35); outline-offset: 2px; }
+  .watch-section + .watch-section { margin-top: 2.25rem; }
   .filter-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 1.15rem; padding: .25rem 0 .2rem; }
   .filter-chip {
     appearance: none; -webkit-appearance: none;
@@ -155,13 +135,9 @@
 <body>
 <main>
 <div class="topbar">
-  <p class="updated">Updated September 23, 2026 at 8:56 PM PT</p>
-  <nav class="tabs" aria-label="Vehicle category">
-    <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="triumphs" data-category="triumphs">Triumph <span aria-hidden="true">(44)</span></button>
-    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="ford-trucks" data-category="ford-trucks">Ford <span aria-hidden="true">(262)</span></button>
-  </nav>
+  <p class="updated">Updated September 23, 2026 at 9:01 PM PT</p>
 </div>
-<div class="filter-bar" id="filter-bar" role="group" aria-label="Listing filters"><button type="button" class="filter-chip" data-filter="new-today" data-filter-cat="all" aria-pressed="false">New today</button><button type="button" class="filter-chip" data-filter="ca" data-filter-cat="all" aria-pressed="false">In California</button><button type="button" class="filter-chip" data-filter="4x4" data-filter-cat="ford-trucks" aria-pressed="false" hidden>4x4/Highboy</button><button type="button" class="filter-chip" data-filter="desert-sled" data-filter-cat="triumphs" aria-pressed="false">Desert sled</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="pre-1960" aria-pressed="false">Pre-1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1960-1966" aria-pressed="false">1960–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1967-1970" aria-pressed="false">1967–1970</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1971-1973" aria-pressed="false">1971–1973</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="pre-1948" aria-pressed="false" hidden>Pre-1948</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1948-1952" aria-pressed="false" hidden>1948–1952</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1953-1956" aria-pressed="false" hidden>1953–1956</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1957-1960" aria-pressed="false" hidden>1957–1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1961-1966" aria-pressed="false" hidden>1961–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1967-1972" aria-pressed="false" hidden>1967–1972</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1973-1974" aria-pressed="false" hidden>1973–1974</button><button type="button" class="filter-chip is-clear" data-filter="clear" data-filter-cat="all" id="filter-clear" disabled>Clear filters</button><span class="filter-meta" id="filter-showing">Showing 0 of 0</span></div>
+<div class="filter-bar" id="filter-bar" role="group" aria-label="Listing filters"><button type="button" class="filter-chip" data-filter="new-today" data-filter-cat="all" aria-pressed="false">New today</button><button type="button" class="filter-chip" data-filter="ca" data-filter-cat="all" aria-pressed="false">In California</button><button type="button" class="filter-chip" data-filter="4x4" data-filter-cat="ford-trucks" aria-pressed="false">4x4/Highboy</button><button type="button" class="filter-chip" data-filter="desert-sled" data-filter-cat="triumphs" aria-pressed="false">Desert sled</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="pre-1960" aria-pressed="false">Pre-1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1960-1966" aria-pressed="false">1960–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1967-1970" aria-pressed="false">1967–1970</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="triumphs" data-year-group="1971-1973" aria-pressed="false">1971–1973</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="pre-1948" aria-pressed="false">Pre-1948</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1948-1952" aria-pressed="false">1948–1952</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1953-1956" aria-pressed="false">1953–1956</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1957-1960" aria-pressed="false">1957–1960</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1961-1966" aria-pressed="false">1961–1966</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1967-1972" aria-pressed="false">1967–1972</button><button type="button" class="filter-chip" data-filter="year" data-filter-cat="ford-trucks" data-year-group="1973-1974" aria-pressed="false">1973–1974</button><button type="button" class="filter-chip is-clear" data-filter="clear" data-filter-cat="all" id="filter-clear" disabled>Clear filters</button><span class="filter-meta" id="filter-showing">Showing 0 of 0</span></div>
 <section class="watch-section" aria-labelledby="triumphs" data-category="triumphs">
       <div class="section-heading"><h2 id="triumphs">Triumphs</h2><span>44 listings</span></div>
       <div class="grid"><article class="card" data-ca="1" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1971-1973" data-year="1973">
@@ -562,9 +538,9 @@
       </div>
     </article></div>
     </section>
-<section class="watch-section" hidden aria-labelledby="ford-trucks" data-category="ford-trucks">
+<section class="watch-section" aria-labelledby="ford-trucks" data-category="ford-trucks">
       <div class="section-heading"><h2 id="ford-trucks">Ford trucks</h2><span>262 listings</span></div>
-      <div class="grid"><article class="card" data-ca="1" data-4x4="0" data-desert-sled="0" data-new-today="0" data-year-group="1967-1972" data-year="1969">
+      <div class="grid"><article class="card" data-ca="1" data-4x4="0" data-desert-sled="0" data-new-today="1" data-year-group="1967-1972" data-year="1969">
       <a class="photo-link" href="https://www.facebook.com/marketplace/item/1648726900073998/" target="_blank" rel="noopener" aria-label="Open listing for 1969 Ford f-250 Long Bed"><div class="photo-frame"><img src="images/fb-ford-1969-1.jpg" alt="1969 Ford f-250 Long Bed" loading="lazy" decoding="async"></div></a>
       <div class="card-body">
         <div class="price">$6,900</div>
@@ -2927,12 +2903,10 @@
 </main>
 <script>
 (() => {
-  const tabs = [...document.querySelectorAll('.tab')];
   const sections = [...document.querySelectorAll('.watch-section')];
   const filterBar = document.getElementById('filter-bar');
   const showingEl = document.getElementById('filter-showing');
   const clearBtn = document.getElementById('filter-clear');
-  let active = 'triumphs';
 
   const state = {
     ca: false,
@@ -2942,19 +2916,13 @@
     yearGroups: new Set(),
   };
 
-  const chipsForCategory = (category) => {
-    filterBar.querySelectorAll('[data-filter-cat]').forEach(chip => {
-      const cats = (chip.dataset.filterCat || '').split(/\s+/);
-      const show = cats.includes(category) || cats.includes('all');
-      chip.hidden = !show;
-    });
-  };
-
   const cardMatches = (card) => {
+    const cat = card.closest('.watch-section')?.dataset.category || '';
     if (state.newToday && card.getAttribute('data-new-today') !== '1') return false;
     if (state.ca && card.getAttribute('data-ca') !== '1') return false;
-    if (state.fourx4 && card.getAttribute('data-4x4') !== '1') return false;
-    if (state.desertSled && card.getAttribute('data-desert-sled') !== '1') return false;
+    // Category-scoped chips: do not hide the other category
+    if (state.fourx4 && cat === 'ford-trucks' && card.getAttribute('data-4x4') !== '1') return false;
+    if (state.desertSled && cat === 'triumphs' && card.getAttribute('data-desert-sled') !== '1') return false;
     if (state.yearGroups.size) {
       const yg = card.getAttribute('data-year-group') || '';
       if (!state.yearGroups.has(yg)) return false;
@@ -2963,63 +2931,32 @@
   };
 
   const applyFilters = () => {
-    const section = sections.find(s => s.dataset.category === active);
-    if (!section) return;
-    const cards = [...section.querySelectorAll('.card')];
     let shown = 0;
-    cards.forEach(card => {
-      const ok = cardMatches(card);
-      card.hidden = !ok;
-      if (ok) shown += 1;
+    let total = 0;
+    sections.forEach(section => {
+      const cards = [...section.querySelectorAll('.card')];
+      let sectionShown = 0;
+      cards.forEach(card => {
+        const ok = cardMatches(card);
+        card.hidden = !ok;
+        if (ok) sectionShown += 1;
+      });
+      total += cards.length;
+      shown += sectionShown;
+      const headingCount = section.querySelector('.section-heading span');
+      if (headingCount) {
+        const filtered = state.newToday || state.ca || state.fourx4 || state.desertSled || state.yearGroups.size;
+        headingCount.textContent = filtered
+          ? `${sectionShown} of ${cards.length} listings`
+          : `${cards.length} listings`;
+      }
     });
-    const total = cards.length;
     if (showingEl) showingEl.textContent = `Showing ${shown} of ${total}`;
-    const headingCount = section.querySelector('.section-heading span');
-    if (headingCount) {
-      headingCount.textContent = state.newToday || state.ca || state.fourx4 || state.desertSled || state.yearGroups.size
-        ? `${shown} of ${total} listings`
-        : `${total} listings`;
-    }
     if (clearBtn) {
       const any = state.newToday || state.ca || state.fourx4 || state.desertSled || state.yearGroups.size > 0;
       clearBtn.disabled = !any;
     }
   };
-
-  const setCategory = (category, moveFocus = false) => {
-    active = category;
-    tabs.forEach(tab => {
-      const selected = tab.dataset.category === category;
-      tab.setAttribute('aria-selected', String(selected));
-      if (moveFocus && selected) tab.focus();
-    });
-    sections.forEach(section => { section.hidden = section.dataset.category !== category; });
-    // Drop inapplicable filters when switching tabs
-    if (category === 'triumphs') {
-      state.fourx4 = false;
-      const c = filterBar.querySelector('[data-filter="4x4"]');
-      if (c) c.setAttribute('aria-pressed', 'false');
-    } else {
-      state.desertSled = false;
-      const c = filterBar.querySelector('[data-filter="desert-sled"]');
-      if (c) c.setAttribute('aria-pressed', 'false');
-    }
-    // Clear year groups that belong to the other category
-    const valid = new Set(
-      [...filterBar.querySelectorAll(`[data-filter="year"][data-filter-cat="${category}"]`)]
-        .map(c => c.dataset.yearGroup)
-    );
-    [...state.yearGroups].forEach(g => {
-      if (!valid.has(g)) state.yearGroups.delete(g);
-    });
-    filterBar.querySelectorAll('[data-filter="year"]').forEach(chip => {
-      chip.setAttribute('aria-pressed', state.yearGroups.has(chip.dataset.yearGroup) ? 'true' : 'false');
-    });
-    chipsForCategory(category);
-    applyFilters();
-  };
-
-  tabs.forEach(tab => tab.addEventListener('click', () => setCategory(tab.dataset.category)));
 
   filterBar.addEventListener('click', (event) => {
     const chip = event.target.closest('.filter-chip');
@@ -3050,50 +2987,6 @@
     applyFilters();
   });
 
-  // Swipe only when the gesture is clearly horizontal. Vertical scroll often
-  // wobbles sideways ~50px on phones and was flipping Triumph → Ford.
-  let startX = null;
-  let startY = null;
-  let tracking = false;
-  let cancelled = false;
-  const content = document.querySelector('main');
-  content.addEventListener('touchstart', event => {
-    if (event.touches.length !== 1) return;
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-    tracking = true;
-    cancelled = false;
-  }, {passive:true});
-  content.addEventListener('touchmove', event => {
-    if (!tracking || cancelled || startX === null) return;
-    const x = event.touches[0].clientX;
-    const y = event.touches[0].clientY;
-    const dx = Math.abs(x - startX);
-    const dy = Math.abs(y - startY);
-    // Once vertical scroll dominates, never treat this gesture as a tab swipe.
-    if (dy > 12 && dy >= dx) cancelled = true;
-  }, {passive:true});
-  content.addEventListener('touchend', event => {
-    if (!tracking || startX === null) return;
-    const dx = event.changedTouches[0].clientX - startX;
-    const dy = event.changedTouches[0].clientY - startY;
-    tracking = false;
-    startX = null;
-    startY = null;
-    if (cancelled) return;
-    if (Math.abs(dx) < 80) return;
-    if (Math.abs(dx) < Math.abs(dy) * 2) return; // must be clearly horizontal
-    if (dx < 0 && active === 'triumphs') setCategory('ford-trucks');
-    if (dx > 0 && active === 'ford-trucks') setCategory('triumphs');
-  }, {passive:true});
-  content.addEventListener('touchcancel', () => {
-    tracking = false;
-    cancelled = true;
-    startX = null;
-    startY = null;
-  }, {passive:true});
-
-  chipsForCategory(active);
   applyFilters();
 })();
 
