@@ -3,74 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#f5f5f7">
 <title>Classic Watch — Triumphs &amp; Ford Trucks</title>
 <style>
-  :root { color-scheme: dark; --ink:#f5f5f7; --muted:#aeb5bf; --line:#343b45; --paper:#000000; --card:#1b1e23; --accent:#ff7a45; }
-  * { box-sizing:border-box; }
-  html { background:#000; }
-  body { margin:0; color:var(--ink); background:#000; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,Helvetica,Arial,sans-serif; line-height:1.45; }
-  main { max-width:1400px; margin:0 auto; padding:0 clamp(1rem,4vw,4rem) 4rem; touch-action:pan-y; }
+  :root {
+    color-scheme: light;
+    --ink: #1d1d1f;
+    --muted: #86868b;
+    --line: #d2d2d7;
+    --paper: #f5f5f7;
+    --card: #ffffff;
+    --photo: #e8e8ed;
+    --blue: #0071e3;
+    --blue-press: #0077ed;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 1400px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 4rem) 4rem; touch-action: pan-y; }
   .topbar {
-    position:sticky; top:0; z-index:10;
-    background:#000;
-    padding:.55rem 0 .35rem;
-    margin:0 0 .35rem;
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(245, 245, 247, 0.92);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    padding: .65rem 0 .4rem;
+    margin: 0 0 .35rem;
+    border-bottom: 1px solid rgba(0,0,0,.06);
   }
   .updated {
-    margin:0 0 .45rem;
-    text-align:center;
-    color:var(--muted);
-    font-size:.72rem;
-    font-weight:500;
-    letter-spacing:.01em;
+    margin: 0 0 .5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
-  .tabs { display:flex; gap:.25rem; width:max-content; max-width:100%; margin:0 auto .15rem; padding:.25rem; background:rgba(29,32,38,.95); border:1px solid #3b414b; border-radius:999px; box-shadow:0 2px 12px rgba(0,0,0,.45); }
-  .tab { appearance:none; border:0; border-radius:999px; padding:.55rem 1rem; background:transparent; color:var(--muted); cursor:pointer; font:inherit; font-size:.9rem; font-weight:650; white-space:nowrap; }
-  .tab[aria-selected="true"] { background:#f5f5f7; color:#111317; box-shadow:0 1px 3px rgba(0,0,0,.35); }
-  .tab:focus-visible { outline:3px solid rgba(29,93,143,.35); outline-offset:2px; }
-  .filter-bar { display:flex; flex-wrap:wrap; align-items:center; gap:.45rem; margin:0 0 1.1rem; padding:.15rem 0 .35rem; }
+  .tabs {
+    display: flex; gap: 0; width: max-content; max-width: 100%;
+    margin: 0 auto .1rem; padding: .2rem;
+    background: #e8e8ed; border: 0; border-radius: 999px;
+  }
+  .tab {
+    appearance: none; border: 0; border-radius: 999px;
+    padding: .5rem 1.05rem; background: transparent; color: var(--ink);
+    cursor: pointer; font: inherit; font-size: .875rem; font-weight: 500;
+    white-space: nowrap; transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  .tab[aria-selected="true"] {
+    background: #fff; color: var(--ink);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 1px rgba(0,0,0,.08);
+  }
+  .tab:focus-visible { outline: 3px solid rgba(0,113,227,.35); outline-offset: 2px; }
+  .filter-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 1.15rem; padding: .25rem 0 .2rem; }
   .filter-chip {
-    appearance:none; -webkit-appearance:none; border:1px solid var(--line); border-radius:999px;
-    padding:.42rem .85rem; background:rgba(29,32,38,.92); color:var(--ink);
-    font:inherit; font-size:.82rem; font-weight:600; cursor:pointer;
-    box-shadow:0 1px 2px rgba(0,0,0,.25); transition:background .15s, color .15s, border-color .15s, box-shadow .15s;
-    -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none;
+    appearance: none; -webkit-appearance: none;
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: .4rem .85rem; background: #fff; color: var(--ink);
+    font: inherit; font-size: .8125rem; font-weight: 500; cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s, box-shadow .15s;
+    -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none;
   }
   .filter-chip[aria-pressed="true"] {
-    background:#f5f5f7; color:#111317; border-color:#f5f5f7;
-    box-shadow:0 1px 3px rgba(0,0,0,.35);
+    background: var(--ink); color: #fff; border-color: var(--ink);
   }
-  .filter-chip:focus-visible { outline:3px solid rgba(29,93,143,.35); outline-offset:2px; }
-  .filter-chip[hidden] { display:none !important; }
-  .filter-chip.is-clear { color:var(--muted); font-weight:550; border-style:dashed; }
-  .filter-chip.is-clear:disabled { opacity:.4; cursor:default; }
-  .filter-meta { margin-left:auto; color:var(--muted); font-size:.82rem; white-space:nowrap; }
-  .watch-section[hidden] { display:none; }
-
-  .watch-section { margin-top:.35rem; }
-  .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; border-bottom:1px solid var(--line); margin-bottom:.85rem; padding-bottom:.35rem; }
-  .section-heading h2 { margin:0; font-size:1.05rem; font-weight:650; }
-  .section-heading span { color:var(--muted); font-size:.8rem; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr)); gap:1rem; align-items:start; }
-  .card { overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 2px 8px rgba(23,32,43,.06); }
-  .card[hidden] { display:none !important; }
-  .photo-link { display:block; background:#252a31; }
-  .photo-frame { background:#252a31; width:100%; }
-  .photo-frame img { width:100%; height:auto; display:block; object-fit:contain; }
-  .photo-frame.missing { min-height:12rem; display:grid; place-items:center; color:var(--muted); font-size:.9rem; }
-  .card-body { padding:.85rem 1rem 1rem; }
-  .price { font-size:1.35rem; font-weight:750; color:var(--accent); }
-  .card h2 { margin:.15rem 0 .45rem; font-size:1.05rem; line-height:1.25; }
-  .source, .date { margin:.25rem 0; color:var(--muted); font-size:.84rem; }
-  .date { font-size:.78rem; }
-  .listing { display:inline-block; margin-top:.65rem; color:#7eb6e8; font-size:.88rem; font-weight:650; text-decoration:none; }
-  .listing:hover, .listing:focus { text-decoration:underline; }
-  footer { max-width:1400px; margin:0 auto; padding:0 clamp(1rem,4vw,4rem) 2rem; color:var(--muted); font-size:.78rem; }
-  @media (max-width:520px) {
-    .grid { grid-template-columns:1fr; }
-    .card-body { padding:.8rem .9rem .95rem; }
-    .filter-meta { width:100%; margin-left:0; margin-top:.15rem; }
+  .filter-chip:focus-visible { outline: 3px solid rgba(0,113,227,.35); outline-offset: 2px; }
+  .filter-chip[hidden] { display: none !important; }
+  .filter-chip.is-clear { color: var(--muted); font-weight: 400; border-style: dashed; background: transparent; }
+  .filter-chip.is-clear:disabled { opacity: .4; cursor: default; }
+  .filter-meta { margin-left: auto; color: var(--muted); font-size: .8125rem; font-weight: 400; white-space: nowrap; }
+  .watch-section[hidden] { display: none; }
+  .watch-section { margin-top: .45rem; }
+  .section-heading {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+    border-bottom: 1px solid var(--line); margin-bottom: .95rem; padding-bottom: .4rem;
+  }
+  .section-heading h2 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); }
+  .section-heading span { color: var(--muted); font-size: .8125rem; font-weight: 400; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.15rem; align-items: start; }
+  .card {
+    overflow: hidden; background: var(--card); border: 0; border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.04), 0 0 1px rgba(0,0,0,.08);
+  }
+  .card[hidden] { display: none !important; }
+  .photo-link { display: block; background: var(--photo); }
+  .photo-frame { background: var(--photo); width: 100%; }
+  .photo-frame img { width: 100%; height: auto; display: block; object-fit: contain; }
+  .photo-frame.missing { min-height: 12rem; display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
+  .card-body { padding: 1rem 1.1rem 1.15rem; }
+  .price {
+    font-size: 1.3125rem; font-weight: 600; color: var(--ink);
+    letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
+  }
+  .card h2 {
+    margin: .2rem 0 .5rem; font-size: 1.0625rem; font-weight: 600;
+    line-height: 1.25; letter-spacing: -0.015em; color: var(--ink);
+  }
+  .source, .date { margin: .2rem 0; color: var(--muted); font-size: .8125rem; font-weight: 400; }
+  .date { font-size: .75rem; }
+  .listing {
+    display: inline-block; margin-top: .7rem; color: var(--blue);
+    font-size: .875rem; font-weight: 400; text-decoration: none;
+  }
+  .listing:hover, .listing:focus { color: var(--blue-press); text-decoration: underline; }
+  footer {
+    max-width: 1400px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 4rem) 2.5rem;
+    color: var(--muted); font-size: .75rem; font-weight: 400;
+  }
+  @media (max-width: 520px) {
+    .grid { grid-template-columns: 1fr; }
+    .card-body { padding: .9rem 1rem 1rem; }
+    .filter-meta { width: 100%; margin-left: 0; margin-top: .15rem; }
   }
 
 </style>
@@ -78,7 +129,7 @@
 <body>
 <main>
 <div class="topbar">
-  <p class="updated">Updated September 23, 2026 at 8:52 PM PT</p>
+  <p class="updated">Updated September 23, 2026 at 8:54 PM PT</p>
   <nav class="tabs" aria-label="Vehicle category">
     <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="triumphs" data-category="triumphs">Triumph <span aria-hidden="true">(44)</span></button>
     <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="ford-trucks" data-category="ford-trucks">Ford <span aria-hidden="true">(262)</span></button>
