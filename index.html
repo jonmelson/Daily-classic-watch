@@ -88,17 +88,41 @@
   }
   .section-heading h2 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; color: var(--ink); }
   .section-heading span { color: var(--muted); font-size: .8125rem; font-weight: 400; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.15rem; align-items: start; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+    gap: 1.15rem;
+    align-items: stretch;
+  }
   .card {
+    display: flex; flex-direction: column;
+    height: 28.5rem;
     overflow: hidden; background: var(--card); border: 0; border-radius: 18px;
     box-shadow: 0 2px 12px rgba(0,0,0,.04), 0 0 1px rgba(0,0,0,.08);
   }
   .card[hidden] { display: none !important; }
-  .photo-link { display: block; background: var(--photo); }
-  .photo-frame { background: var(--photo); width: 100%; }
-  .photo-frame img { width: 100%; height: auto; display: block; object-fit: contain; }
-  .photo-frame.missing { min-height: 12rem; display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
-  .card-body { padding: 1rem 1.1rem 1.15rem; }
+  .photo-link {
+    display: block; flex: 0 0 15.5rem; height: 15.5rem;
+    background: var(--photo); overflow: hidden;
+  }
+  .photo-frame {
+    background: var(--photo); width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .photo-frame img {
+    width: 100%; height: 100%; display: block;
+    object-fit: contain; object-position: center;
+  }
+  .photo-frame.missing {
+    min-height: 0; height: 100%; display: grid; place-items: center;
+    color: var(--muted); font-size: .9rem;
+  }
+  .card-body {
+    flex: 1 1 auto; min-height: 0;
+    padding: .9rem 1.1rem 1rem;
+    display: flex; flex-direction: column;
+  }
+  .card-body .listing { margin-top: auto; padding-top: .55rem; }
   .price {
     font-size: 1.3125rem; font-weight: 600; color: var(--ink);
     letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
@@ -120,7 +144,9 @@
   }
   @media (max-width: 520px) {
     .grid { grid-template-columns: 1fr; }
-    .card-body { padding: .9rem 1rem 1rem; }
+    .card { height: 27.5rem; }
+    .photo-link { flex-basis: 14.5rem; height: 14.5rem; }
+    .card-body { padding: .85rem 1rem .95rem; }
     .filter-meta { width: 100%; margin-left: 0; margin-top: .15rem; }
   }
 
@@ -129,7 +155,7 @@
 <body>
 <main>
 <div class="topbar">
-  <p class="updated">Updated September 23, 2026 at 8:54 PM PT</p>
+  <p class="updated">Updated September 23, 2026 at 8:56 PM PT</p>
   <nav class="tabs" aria-label="Vehicle category">
     <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="triumphs" data-category="triumphs">Triumph <span aria-hidden="true">(44)</span></button>
     <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="ford-trucks" data-category="ford-trucks">Ford <span aria-hidden="true">(262)</span></button>
